@@ -1,0 +1,91 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 50%;
+  font-size: 16px;
+  font-family: "DejaVu Sans", "Segoe UI", Tahoma;
+}
+
+a:link, a:visited, a:active {
+  color: #1c7fdb;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1785eb;
+  text-decoration: underline;
+}
+
+#container {
+  width: 100%;
+  margin: 30px auto;
+  margin-left: -50%;
+  padding: 10px;
+}
+
+ul#container li.column {
+  margin: 10px;
+  padding: 10px;
+  min-width: 150px;
+  background-color: #f9f9f9;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  vertical-align: top;
+  display: inline-block;
+}
+
+li.column .column-title {
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ul.links {
+  padding: 0;
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+
+ul.links li {
+  padding: 2px 0;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  padding-bottom: 3px;
+}
+
+#background {
+  z-index: -100;
+}
+
+#background, #background li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#background li {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

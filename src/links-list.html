@@ -1,0 +1,13 @@
+<li class="column">
+  <p class="column-title"><%=title%></p>
+  <ul class="links">
+    <% for (var i = 0; i < links.length; i++) { %>
+      <% if (!links[i]) { %>
+        <hr/>
+      <% } else { %>
+        <li><a href="<%=links[i].url%>"><img src="https://getfavicon.appspot.com/<%=links[i].url%>"
+         align="absmiddle" class="favicon" />&nbsp;<%=links[i].title%></a></li>
+      <% } %>
+    <% } %>
+  </ul>
+</li>
