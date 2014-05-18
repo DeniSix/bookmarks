@@ -31,11 +31,13 @@ a:hover {
 ul#container li.column {
   margin: 10px;
   padding: 10px;
-  min-width: 150px;
+  width: 150px;
   background-color: #f9f9f9;
   border: solid 1px rgba(0, 0, 0, 0.2);
   vertical-align: top;
   display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 li.column .column-title {
