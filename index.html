@@ -4,22 +4,22 @@
   <meta charset="utf-8" />
 <!--
 Social
-  Facebook      http://facebook.com
-  Twitter       http://twitter.com
-  Google+       http://plus.google.com
-  Instagram     http://instagram.com/
+  Facebook      https://facebook.com
+  Twitter       https://twitter.com
+  Google+       https://plus.google.com
+  Instagram     https://instagram.com/
   Pinterest     https://pinterest.com/
-  Reddit        http://reddit.com/
-  Tumblr        http://tumblr.com/
+  Reddit        https://reddit.com/
+  Tumblr        https://tumblr.com/
 
 Cloud
   Dropbox       http://dropbox.com
   Google Drive  http://drive.google.com
-  SkyDrive      https://skydrive.live.com/
+  OneDrive      https://onedrive.live.com/
 
 Shop
   Ebay          http://ebay.com/
-  Amazon        http://amazon.com/
+  Amazon        https://amazon.com/
   -
   Google Shopping     https://www.google.co.uk/shopping
 
@@ -27,7 +27,7 @@ Web Dev
   GitHub        https://github.com
   BitBucket     https://bitbucket.org
   jQuery        http://jquery.com/
-  node.js       http://nodejs.org/api/
+  node.js       https://nodejs.org/api/
   -
   Twitter Bootstrap   http://getbootstrap.com/
   Nomalize.css        http://necolas.github.io/normalize.css/
@@ -35,20 +35,20 @@ Web Dev
 
 Search
   Google        https://google.com
-  Bing          http://bing.com
+  Bing          https://bing.com
   DuckDuckGo    https://duckduckgo.com/
-  Yahoo         http://yahoo.com
-  Wikipedia     http://wikipedia.org/
+  Yahoo         https://yahoo.com
+  Wikipedia     https://wikipedia.org/
   IMDB          http://imdb.com/
 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>New tab</title>
   <link href="data:image/x-icon;base64,AAABAAEAEBACAAAAAACwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA/4QAAAAAAAA+fAAAPnwAAD58AAA+fAAAP/wAAL/9AADf+wAAb/YAADfsAAAb2AAADbQAAAZsAAADzAAAAYAAAAAAAAD//wAAwYMAAMGDAADBgwAAwYMAAMADAABAAgAAIAQAAJAJAADIEwAA5CcAAPJLAAD5kwAA/DMAAP5/AAD//wAA" rel="icon" type="image/x-icon" />
-  <style type="text/css">html{height:100%}body{margin:0;padding:0;padding-left:50%;font-size:16px;font-family:"DejaVu Sans","Segoe UI",Tahoma}a:active,a:link,a:visited{color:#1c7fdb;font-size:16px;text-decoration:none}a:hover{color:#1785eb;text-decoration:underline}#container{width:100%;margin:30px auto;margin-left:-50%;padding:10px}ul#container li.column{margin:10px;padding:10px;min-width:150px;background-color:#f9f9f9;border:solid 1px rgba(0,0,0,.2);vertical-align:top;display:inline-block}li.column .column-title{margin:0;padding:0;color:#ccc;font-size:12px;font-weight:700;text-transform:uppercase}ul.links{padding:0;margin:8px 0 0;list-style:none}ul.links li{padding:2px 0}hr{height:1px;border:none;background-color:rgba(0,0,0,.1)}.favicon{width:16px;height:16px;padding-bottom:3px}#background{z-index:-100}#background,#background li{position:absolute;top:0;left:0;right:0;bottom:0;margin:0;padding:0}#background li{background-color:transparent;background-size:cover;background-position:center center;background-repeat:no-repeat}</style>
+  <style type="text/css">html{height:100%}body{margin:0;padding:0;font-size:16px;font-family:-apple-system,".SFNSText-Regular","San Francisco",Roboto,Ubuntu,Cantarell,"Droid Sans","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;text-align:center;background-color:#0e0e0e;background-size:cover;background-position:center center;background-repeat:no-repeat;background-attachment:fixed;-webkit-transition:background-image .3s ease-in-out;transition:background-image .3s ease-in-out}a:active,a:link,a:visited{color:#1c7fdb;font-size:16px;text-decoration:none}a:hover{color:#1785eb;text-decoration:underline}#container{margin:30px auto;padding:10px}ul#container li.column{margin:10px;padding:10px;width:200px;background-color:rgba(249,249,249,.9);border:solid 1px rgba(0,0,0,.2);vertical-align:top;display:inline-block;white-space:nowrap;overflow:hidden;text-align:initial}li.column .column-title{margin:0;padding:0;color:#aaa;font-size:12px;font-weight:700;text-transform:uppercase}ul.links{padding:0;margin:8px 0 0;list-style:none}ul.links li{padding:2px 0}hr{height:1px;border:none;background-color:rgba(0,0,0,.1)}.favicon{width:16px;height:16px;padding-bottom:3px}</style>
 </head>
 <body>
-  <ul id="background"><li></li></ul>
   <ul id="container"></ul>
-  <script type="text/x-template" id="links-list"><li class="column"><p class="column-title"><%=title%></p><ul class="links"><% for (var i = 0; i < links.length; i++) { %><% if (!links[i]) { %><hr><% } else { %><li><a href="<%=links[i].url%>"><img src="https://getfavicon.appspot.com/<%=links[i].url%>" align="absmiddle" class="favicon">&nbsp;<%=links[i].title%></a></li><% } %><% } %></ul></li></script>
-  <script>function jsonp(n,e,t){"function"==typeof e&&(t=e,e={});var o="jsonp_"+Date.now();e.callback=o,window[o]=function(n){window[o]=null,t(n)};var r=[];for(var a in e)r.push(a+"="+encodeURIComponent(e[a]));var l=document.createElement("script");l.src=n+"?"+r.join("&"),document.querySelector("head").appendChild(l)}!function(){var n={};this.tmpl=function e(t,o){var r=/[\w\-]+$/.test(t)?n[t]=n[t]||e(document.getElementById(t).innerHTML):new Function("obj","var p=[],print=function(){p.push.apply(p,arguments);};with(obj){p.push('"+t.replace(/[\r\t\n]/g," ").split("<%").join("	").replace(/((^|%>)[^\t]*)'/g,"$1\r").replace(/\t=(.*?)%>/g,"',$1,'").split("	").join("');").split("%>").join("p.push('").split("\r").join("\\'")+"');}return p.join('');");return o?r(o):r}}();var YQL_API="https://query.yahooapis.com/v1/public/yql",BING_WALLPAPER_API="http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",WALLPAPER_URL="url(http://www.bing.com{url}_1920x1080.jpg)";document.addEventListener("DOMContentLoaded",function(){var n=document.querySelector("head"),e=document.querySelector("#container"),t=document.querySelector("#background li");t.style.backgroundImage=localStorage?localStorage.getItem("background"):"",jsonp(YQL_API,{q:'SELECT * FROM json WHERE url="'+BING_WALLPAPER_API+'"',format:"json",jsonCompat:"new"},function(n){var e=WALLPAPER_URL.replace("{url}",n.query.results.json.images[0].urlbase);localStorage?localStorage.background=e:void 0,t.style.backgroundImage=e});for(var o=null,r=[],a=null,l=0;l<n.childNodes.length;l++){var i=n.childNodes[l];if(8===i.nodeType){o=i.data.split("\n").filter(function(n){return null!==n&&""!==n.trim()});break}}if(!o)throw alert("Bookmarks data not found!\nAre something wrong with comment?"),new Error("Bookmarks data not found");for(var l=0;l<o.length;l++){var u=o[l].trim();if("-"===u)a.push(null);else if(" "===o[l][0]||"	"===o[l][0]){var c=u.split(/\s+/),p=c.pop();a.push({title:c.join(" "),url:p})}else a=[],r.push({title:u,links:a})}for(var s=tmpl("links-list"),d="",l=0;l<r.length;l++)d+=s(r[l]);e.innerHTML=d});</script>
+  <script type="text/x-template" id="links-list"><li class="column"><p class="column-title"><%=title%></p><ul class="links"><% for (var i = 0; i < links.length; i++) { %><% if (!links[i]) { %><hr><% } else { %><li><a href="<%=links[i].url%>"><img src="https://www.google.com/s2/favicons?domain=<%=links[i].domain%>" align="absmiddle" class="favicon">&nbsp;<%=links[i].title%></a></li><% } %><% } %></ul></li></script>
+  <script>function urlDomain(n){var e=document.createElement("a");return e.href=n,e.hostname}function jsonp(n,e,t){"function"==typeof e&&(t=e,e={});var o="jsonp_"+Date.now();e.callback=o,window[o]=function(n){window[o]=null,t(n)};var r=[];for(var a in e)r.push(a+"="+encodeURIComponent(e[a]));var l=document.createElement("script");l.src=n+"?"+r.join("&"),document.querySelector("head").appendChild(l)}!function(){var n={};this.tmpl=function e(t,o){var r=/[\w\-]+$/.test(t)?n[t]=n[t]||e(document.getElementById(t).innerHTML):new Function("obj","var p=[],print=function(){p.push.apply(p,arguments);};with(obj){p.push('"+t.replace(/[\r\t\n]/g," ").split("<%").join("	").replace(/((^|%>)[^\t]*)'/g,"$1\r").replace(/\t=(.*?)%>/g,"',$1,'").split("	").join("');").split("%>").join("p.push('").split("\r").join("\\'")+"');}return p.join('');");return o?r(o):r}}();var YQL_API="https://query.yahooapis.com/v1/public/yql",BING_WALLPAPER_API="http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",WALLPAPER_URL="url(http://www.bing.com{url}_1920x1080.jpg)";document.addEventListener("DOMContentLoaded",function(){var n=document.querySelector("head"),e=document.querySelector("#container"),t=document.querySelector("body");t.style.backgroundImage=localStorage?localStorage.getItem("background"):"",jsonp(YQL_API,{q:'SELECT * FROM json WHERE url="'+BING_WALLPAPER_API+'"',format:"json",jsonCompat:"new"},function(n){var e=WALLPAPER_URL.replace("{url}",n.query.results.json.images[0].urlbase);localStorage?localStorage.background=e:void 0,t.style.backgroundImage=e});for(var o=null,r=[],a=null,l=0;l<n.childNodes.length;l++){var i=n.childNodes[l];if(8===i.nodeType){o=i.data.split("\n").filter(function(n){return null!==n&&""!==n.trim()});break}}if(!o)throw alert("Bookmarks data not found!\nAre something wrong with comment?"),new Error("Bookmarks data not found");for(var l=0;l<o.length;l++){var u=o[l].trim();if("-"===u)a.push(null);else if(" "===o[l][0]||"	"===o[l][0]){var c=u.split(/\s+/),s=c.pop();a.push({title:c.join(" "),url:s,domain:urlDomain(s)})}else a=[],r.push({title:u,links:a})}for(var p=tmpl("links-list"),d="",l=0;l<r.length;l++)d+=p(r[l]);e.innerHTML=d});</script>
 </body>
 </html>
