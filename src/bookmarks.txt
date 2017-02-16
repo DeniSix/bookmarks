@@ -1,0 +1,37 @@
+Social
+  Facebook      https://facebook.com
+  Twitter       https://twitter.com
+  Google+       https://plus.google.com
+  Instagram     https://instagram.com/
+  Pinterest     https://pinterest.com/
+  Reddit        https://reddit.com/
+  Tumblr        https://tumblr.com/
+
+Cloud
+  Dropbox       http://dropbox.com
+  Google Drive  http://drive.google.com
+  OneDrive      https://onedrive.live.com/
+
+Shop
+  Ebay          http://ebay.com/
+  Amazon        https://amazon.com/
+  -
+  Google Shopping     https://www.google.co.uk/shopping
+
+Web Dev
+  GitHub        https://github.com
+  BitBucket     https://bitbucket.org
+  jQuery        http://jquery.com/
+  node.js       https://nodejs.org/api/
+  -
+  Twitter Bootstrap   http://getbootstrap.com/
+  Nomalize.css        http://necolas.github.io/normalize.css/
+  CSS3 Generator      http://css3generator.com/
+
+Search
+  Google        https://google.com
+  Bing          https://bing.com
+  DuckDuckGo    https://duckduckgo.com/
+  Yahoo         https://yahoo.com
+  Wikipedia     https://wikipedia.org/
+  IMDB          http://imdb.com/

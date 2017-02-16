@@ -34,8 +34,14 @@
   };
 })();
 
+function urlDomain (data) {
+  var a = document.createElement('a')
+  a.href = data
+  return a.hostname
+}
+
 // Simple JSONP
-function jsonp(url, data, callback) {
+function jsonp (url, data, callback) {
   if (typeof data === 'function') {
     callback = data
     data = {}
@@ -65,20 +71,20 @@ var WALLPAPER_URL = 'url(http://www.bing.com{url}_1920x1080.jpg)'
 document.addEventListener('DOMContentLoaded', function () {
   var $head = document.querySelector('head')
   var $container = document.querySelector('#container')
-  var $background = document.querySelector('#background li')
+  var $background = document.querySelector('body')
   $background.style.backgroundImage = localStorage ? localStorage.getItem('background') : ''
 
   // fetch wallpaper of the day
   jsonp(YQL_API,
-    { q: 'SELECT * FROM json WHERE url="' + BING_WALLPAPER_API + '"'
-    , format: 'json'
-    , jsonCompat: 'new'
+    { q: 'SELECT * FROM json WHERE url="' + BING_WALLPAPER_API + '"',
+      format: 'json',
+      jsonCompat: 'new'
     }
     , function (res) {
-        var url = WALLPAPER_URL.replace('{url}', res.query.results.json.images[0].urlbase)
-        localStorage ? localStorage['background'] = url : void(0)
-        $background.style.backgroundImage = url
-      }
+      var url = WALLPAPER_URL.replace('{url}', res.query.results.json.images[0].urlbase)
+      localStorage ? localStorage['background'] = url : void (0)
+      $background.style.backgroundImage = url
+    }
   )
 
   var raw = null
@@ -108,11 +114,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (val === '-') {
       // divider
       current.push(null)
-    } else if(raw[i][0] === ' ' || raw[i][0] === '\t') {
+    } else if (raw[i][0] === ' ' || raw[i][0] === '\t') {
       // bookmark
       var v = val.split(/\s+/)
       var url = v.pop()
-      current.push({title: v.join(' '), url: url})
+      current.push({title: v.join(' '), url: url, domain: urlDomain(url)})
     } else {
       // stack
       current = []
